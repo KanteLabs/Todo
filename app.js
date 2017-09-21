@@ -41,8 +41,8 @@ app.get('/', (req, res)=>{
     })
 })
 
-const listRoute = require('../routes/list_route')
-app.use('/list', listRoute)
+const todoRoutes = require('./routes/todo_routes')
+app.use('/todo', todoRoutes)
 
 app.get('*', (req, res)=>{
     res.status(404).send('Not Found')
